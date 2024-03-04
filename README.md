@@ -69,7 +69,7 @@ To use any endpoint function in the API, you must first be authorized by PSN. Fo
 2. In the same browser (due to a persisted cookie), visit [https://ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie). You will see a JSON response that looks something like:
 
 ```js
-{ "npsso": "<64 character token>" }
+{ "npsso": "XND5lSY7Abhmp8CnFo6WlaE2SpqbT2aDKj4tiDhO6AwwtgzSgg3axnSCZy9IxMRR" }
 ```
 
 Copy your NPSSO. **Do not expose it anywhere publicly, it is equivalent to your password.**
@@ -80,7 +80,7 @@ If you see an error response, try using different browser.
 
 ```ts
 // This is the value you copied from the previous step.
-const myNpsso = "<64 character token>";
+const myNpsso = "XND5lSY7Abhmp8CnFo6WlaE2SpqbT2aDKj4tiDhO6AwwtgzSgg3axnSCZy9IxMRR";
 
 // We'll exchange your NPSSO for a special access code.
 const accessCode = await exchangeNpssoForCode(myNpsso);
